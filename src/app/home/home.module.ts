@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HomeHomeComponent } from './home-home/home-home.component';
+import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    HomeHomeComponent
+    HomeDashboardComponent
   ],
   imports: [
     CommonModule,

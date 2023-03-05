@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { AppModule } from '../app.module';
 
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { AppModule } from '../app.module';
   imports: [
     RouterModule,
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

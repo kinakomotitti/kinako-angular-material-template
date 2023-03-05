@@ -1,7 +1,44 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
+.app-container {
+    .app-toolbar {
+        position: relative;
+        z-index: 10;
 
-#mat-toolbar {
-    color: "primary"
+        .loading-bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+
+        a {
+            font-weight: 500;
+            color: white;
+        }
+    }
+
+    .app-body {
+        .app-sidenav-section {
+            width: 250px;
+            background-color: green;
+        }
+
+        .mat-sidenav-contents {
+            height: calc(100vh - 145px);
+            padding: 25px 30px 25px 30px;
+        }
+
+        .app-main-contents{
+            padding:  50px;
+            background-color: white;
+        }
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: rgb(9, 2, 24);
+        text-align: center;
+        width: 100%;
+        }
 }
