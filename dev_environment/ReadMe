@@ -1,0 +1,5 @@
+move to dev_environment directory.
+run docker-compose up -d command
+run docker-compose exec sample /bin/bash command and login to container.
+> run npm install
+> run ng serve --host 0.0.0.0 --poll 1000
