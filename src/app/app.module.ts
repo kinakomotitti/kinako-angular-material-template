@@ -10,10 +10,12 @@ import {MaterialModule} from './material/material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     MatNativeDateModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

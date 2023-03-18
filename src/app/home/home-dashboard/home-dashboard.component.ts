@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from 'src/app/shared/services/auth.service';
 @Component({
   selector: 'app-home-dashboard',
   templateUrl: './home-dashboard.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly authService: AuthService ) { 
+  }
 
   ngOnInit(): void {
   }

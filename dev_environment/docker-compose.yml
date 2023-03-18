@@ -11,6 +11,7 @@ services:
       - "4200:4200"
     volumes:
       - ./..:/data
+      - /data/node_modules
     working_dir: /data
   sample-api:
     image: json-server
