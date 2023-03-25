@@ -1,1 +1,6 @@
 @import "styles/variables";
+
+.test.mat-mdc-select-panel{
+    height: 50vh !important;
+    max-height: none !important;
+  }

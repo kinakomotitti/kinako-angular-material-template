@@ -1,1 +1,6 @@
 <p>home-home works!</p>
+<app-k-select
+[placeholder]="'Options Selection'"
+[options]="options"
+    (selectionChange)="getSelectedOptions($event)"
+></app-k-select>

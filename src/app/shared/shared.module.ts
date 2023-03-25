@@ -9,11 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './routers/auth-guard';
 import { UnauthorizedLayoutComponent } from './layout/unauthorized-layout/unauthorized-layout.component';
+import { KTableComponent } from './controls/k-table/k-table.component';
+import { KSelectComponent } from './controls/k-select/k-select.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    UnauthorizedLayoutComponent
+    UnauthorizedLayoutComponent,
+    KTableComponent,
+    KSelectComponent
   ],
   providers:[
     AuthService,
@@ -24,6 +28,10 @@ import { UnauthorizedLayoutComponent } from './layout/unauthorized-layout/unauth
     CommonModule,
     MaterialModule,
     FormsModule,
+  ],
+  exports:[
+    KTableComponent,
+    KSelectComponent
   ]
 })
 export class SharedModule { }
