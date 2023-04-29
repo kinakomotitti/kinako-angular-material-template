@@ -152,6 +152,7 @@ export class KSelectComponent implements OnInit {
     }
     this.selectedValue = val.value;
     this.selectionChange.emit(this.selectedValue);
+    this.options=this.options.sort((a,b)=>b.value-a.value);
   }
 
   public trackByFn(index: number, item: any) {
