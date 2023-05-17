@@ -1,0 +1,31 @@
+<p>sidenav works!</p>
+<div class="app-sidenav-section">
+    <!-- Side Nav contents. implemented as other compornetn. -->
+    <ul>
+        <li>
+            <mat-expansion-panel class="remove-mat-expansion-panel-padding" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                        <p>Home</p>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul>
+                    <li class="menu-button">
+                        <div>
+                            <a _ngcontent-serverapp-c187="" class="menu-link nav-link active"
+                                href="/dashboards/ecommerce"><p>DashBoard</p></a>
+                        </div>
+                    </li>
+                    <li class="menu-button">
+                        <div>
+                            <a _ngcontent-serverapp-c187="" class="menu-link nav-link active"
+                                href="/dashboards/ecommerce"><p>DashBoard</p></a>
+                        </div>
+                    </li>
+                </ul>
+
+            </mat-expansion-panel>
+        </li>
+    </ul>
+</div>

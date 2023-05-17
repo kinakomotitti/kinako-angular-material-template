@@ -11,13 +11,15 @@ import { AuthGuard } from './routers/auth-guard';
 import { UnauthorizedLayoutComponent } from './layout/unauthorized-layout/unauthorized-layout.component';
 import { KTableComponent } from './controls/k-table/k-table.component';
 import { KSelectComponent } from './controls/k-select/k-select.component';
+import { SidenavComponent } from './layout/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     UnauthorizedLayoutComponent,
     KTableComponent,
-    KSelectComponent
+    KSelectComponent,
+    SidenavComponent
   ],
   providers:[
     AuthService,
