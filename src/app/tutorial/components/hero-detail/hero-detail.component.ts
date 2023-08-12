@@ -8,5 +8,5 @@ import { Hero } from '../../interfaes/hero';
   styleUrls: ['./hero-detail.component.scss'],
 })
 export class DetailComponent {
-  @Input() selectedHero!: Hero;
+  @Input() hero!: Hero;
 }
