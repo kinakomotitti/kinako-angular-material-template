@@ -26,6 +26,8 @@
         .app-main-contents{
             padding:  50px;
             background-color: white;
+            overflow-y: auto;
+            height: 100%;
         }
     }
     .footer {
