@@ -1,0 +1,52 @@
+version: '3'
+services:
+  # build:
+  #   build: ./dev_environment/angular
+  #   container_name: angular-setup
+  #   command: > 
+  #     /bin/bash -c "
+  #     echo install pacakges &&
+  #     ng add @angular-eslint/schematics --skip-confirmation &&
+  #     npm install --save-dev eslint-config-prettier &&
+  #     npm install &&
+  #     exit
+  #     "
+  #   environment:
+  #     - NG_CLI_ANALYTICS=false
+  #   volumes:
+  #     - .:/project
+  #   working_dir: /project
+
+  # devenv:
+  #   tty: true
+  #   container_name: angular
+  #   build: ./dev_environment/angular
+  #   depends_on:
+  #     build:
+  #       condition: service_completed_successfully 
+  #   command: > 
+  #     /bin/bash -c "
+  #     npm install &&
+  #     ng s --host 0.0.0.0 --poll 1000
+  #     "
+  #   environment:
+  #     - NG_CLI_ANALYTICS=false
+  #   ports:
+  #     - "4200:4200"
+  #   volumes:
+  #     - .:/project/
+  #     - /project/node_modules
+  #   working_dir: /project
+
+  sample-api:
+    build: ./dev_environment/json-server
+    container_name: sample-api
+    command: > 
+      /bin/bash -c "
+      json-server --watch db.json --port 3000 -H 0.0.0.0
+      "
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dev_environment/data:/data
+    working_dir: /data
