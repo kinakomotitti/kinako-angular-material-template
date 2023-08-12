@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LayoutComponent } from '../shared/layout/authorized-layout/layout.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesScreenComponent } from './screens/heroes-screen/heroes-screen.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children: [{ path: '', component: HeroesComponent }],
+    children: [{ path: '', component: HeroesScreenComponent }],
   },
 ];
 

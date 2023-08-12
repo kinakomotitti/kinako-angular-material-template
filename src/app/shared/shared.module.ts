@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AppModule } from '../app.module';
 import { MaterialModule } from '../material/material.module';
 import { KSelectComponent } from './controls/k-select/k-select.component';
 import { KTableComponent } from './controls/k-table/k-table.component';
