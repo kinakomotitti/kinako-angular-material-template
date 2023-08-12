@@ -1,5 +1,5 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Hero } from '../../interfaes/hero';
 import { HEROES } from '../../mock/heroes';
@@ -11,10 +11,11 @@ import { HEROES } from '../../mock/heroes';
 })
 export class HeroesComponent {
   heroes = HEROES;
-  selectedHero?: Hero;
+
+  @Input() selectedHero?: Hero;
+  @Output() selectedHeroChange = new EventEmitter<Hero>();
 
   onSelectHeroButtonClick(selected: Hero): void {
-    console.debug(selected);
-    this.selectedHero = selected;
+    this.selectedHeroChange.emit(selected);
   }
 }

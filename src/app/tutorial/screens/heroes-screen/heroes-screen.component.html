@@ -1,2 +1,3 @@
 <p>heroes-screen works!</p>
-<app-tutorial-heroes></app-tutorial-heroes>
+<app-tutorial-heroes [(selectedHero)]="selectedHero"></app-tutorial-heroes>
+<app-turoeial-hero-detail *ngIf="selectedHero" [selectedHero]="selectedHero"></app-turoeial-hero-detail>

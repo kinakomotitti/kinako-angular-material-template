@@ -4,8 +4,8 @@ import { Hero } from '../../interfaes/hero';
 
 @Component({
   selector: 'app-turoeial-hero-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss'],
+  templateUrl: './hero-detail.component.html',
+  styleUrls: ['./hero-detail.component.scss'],
 })
 export class DetailComponent {
   @Input() selectedHero!: Hero;
