@@ -10,12 +10,16 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
-        path: 'heroes',
+        path: 'heroes/:id',
         component: HeroesScreenComponent,
+        pathMatch: 'full',
       },
-      { path: 'dashboard', component: DashboardComponent },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        pathMatch: 'full',
+      },
     ],
   },
 ];
