@@ -48,3 +48,18 @@ a {
 a:hover {
   background-color: #000;
 }
+
+.heroes-half-menu{
+padding: 0;
+  margin: auto;
+  max-width: 1000px;
+
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+  float: right;
+}
