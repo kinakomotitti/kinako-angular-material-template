@@ -4,3 +4,14 @@
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
 </div>
+<button type="button" (click)="save()">save</button>
+
+<div>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+
+    <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+        Add hero
+    </button>
+</div>

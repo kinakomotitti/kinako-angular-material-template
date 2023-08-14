@@ -8,6 +8,7 @@ import { MessageComponent } from './components/message/message.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import HeroesScreenComponent from './screens/heroes-screen/heroes-screen.component';
 import { TutorialRoutingModule } from './tutorial-routing.module';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TutorialRoutingModule } from './tutorial-routing.module';
     HeroesScreenComponent,
     MessageComponent,
     DashboardComponent,
+    HeroSearchComponent,
   ],
   imports: [CommonModule, TutorialRoutingModule, SharedModule],
 })
