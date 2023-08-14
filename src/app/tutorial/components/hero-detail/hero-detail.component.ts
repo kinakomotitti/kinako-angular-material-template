@@ -17,7 +17,7 @@ export class HeroDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this._heroService
-      .getHero(this.heroId)
+      .getHero2(this.heroId)
       .subscribe((hero) => (this.hero = hero));
   }
 }

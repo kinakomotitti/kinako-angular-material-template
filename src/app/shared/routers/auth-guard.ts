@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     const browserName = this.authService.detectBrowserName();
-    if (browserName === BrowserEnum.Edge) {
+    if (browserName === BrowserEnum.Chrome) {
       return of(true);
     } else {
       this.router.navigate(['unauthorized']);
