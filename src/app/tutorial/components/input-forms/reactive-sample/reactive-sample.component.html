@@ -1,0 +1,22 @@
+<h1>Reactive Forms/playground</h1>
+<div class="container">
+    <label for="field1">field1</label>
+    <input #input type="text" class="form-control" id="field1" [formControl]="field1">
+    <button type="button" class="btn btn-success" (click)=" editTesxt();">Change Value</button>
+    <button type="button" class="btn btn-default" (click)="input.disabled=true;">disale</button>
+    <button type="button" class="btn btn-default" (click)="input.disabled=false;">enable</button>
+</div>
+<div>
+    <h2>debug area</h2>
+    <label>forms status</label>
+    <p>valid: {{field1.valid}} - invalid: {{field1.invalid}}</p>
+    <p>pending: {{field1.pending}}</p>
+    <p>enabled: {{field1.enabled}} - disabled: {{field1.disabled}}</p>
+    <p>pristine: {{field1.pristine}} - dirty: {{field1.dirty}}</p>
+    <p>touched: {{field1.touched}} - untouched: {{field1.untouched}}</p>
+    <p>status: {{field1.status}}</p>
+    <label for="message">logs</label>
+    <p id="message" *ngFor="let message of formattedMessage">
+        {{message}}
+    </p>
+</div>

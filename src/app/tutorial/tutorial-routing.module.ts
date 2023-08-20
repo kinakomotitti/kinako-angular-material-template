@@ -14,17 +14,14 @@ const routes: Routes = [
       {
         path: 'heroes/:id',
         component: HeroesScreenComponent,
-        pathMatch: 'full',
       },
       {
         path: 'form',
         component: InputFormsSampleComponent,
-        pathMatch: 'full',
       },
       {
         path: 'dashboard',
         component: DashboardComponent,
-        pathMatch: 'full',
       },
     ],
   },
