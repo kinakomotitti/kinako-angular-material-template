@@ -1,4 +1,12 @@
-<app-turoeial-template-driven-hero></app-turoeial-template-driven-hero>
-
-<app-tutorial-reactive-hero></app-tutorial-reactive-hero>
-<app-reactive-sample></app-reactive-sample>
+<mat-tab-group>
+    <mat-tab label="template-driven">
+        <app-turoeial-template-driven-hero></app-turoeial-template-driven-hero>
+    </mat-tab>
+    <mat-tab label="reactive-form">
+        <app-tutorial-reactive-hero></app-tutorial-reactive-hero>
+    </mat-tab>
+    <mat-tab label="playground">
+        <app-reactive-sample [(field1)]="playgroundField"></app-reactive-sample>
+        {{playgroundField | json}}
+    </mat-tab>
+</mat-tab-group>

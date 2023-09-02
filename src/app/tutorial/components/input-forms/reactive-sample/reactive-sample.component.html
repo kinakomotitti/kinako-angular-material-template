@@ -2,7 +2,6 @@
 <div class="container">
     <label for="field1">field1</label>
     <input #input type="text" class="form-control" id="field1" [formControl]="field1">
-    <button type="button" class="btn btn-success" (click)=" editTesxt();">Change Value</button>
     <button type="button" class="btn btn-default" (click)="input.disabled=true;">disale</button>
     <button type="button" class="btn btn-default" (click)="input.disabled=false;">enable</button>
 </div>
