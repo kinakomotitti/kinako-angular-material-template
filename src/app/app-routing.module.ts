@@ -23,6 +23,12 @@ const routes: Routes = [
       import('./tutorial/tutorial.module').then((m) => m.TutorialModule),
   },
   {
+    path: 'playground',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./playground/playground.module').then((m) => m.PlaygroundModule),
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },

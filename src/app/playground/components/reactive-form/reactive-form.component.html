@@ -1,0 +1,24 @@
+<h1>Reactive Forms/playground</h1>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Angular Material Form Field</mat-label>
+        <input matInput placeholder="Placeholder" [formControl]="field1" required>
+        <mat-spinner [diameter]=25 *ngIf="field1.pending" matSuffix class="margin-right"></mat-spinner>
+        <mat-icon *ngIf="field1.valid" matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-icon *ngIf="field1.invalid" matSuffix>sentiment_dissatisfied</mat-icon>
+        <mat-error *ngIf="field1.invalid">
+            <div *ngFor="let message of getErrorMessage()">
+                {{message}}
+            </div>
+        </mat-error>
+    </mat-form-field>
+</div>
+<hr>
+<h1>Debug Area</h1>
+<p>valid: {{field1.valid}} - invalid: {{field1.invalid}}</p>
+<p>pending: {{field1.pending}}</p>
+<p>enabled: {{field1.enabled}} - disabled: {{field1.disabled}}</p>
+<p>pristine: {{field1.pristine}} - dirty: {{field1.dirty}}</p>
+<p>touched: {{field1.touched}} - untouched: {{field1.untouched}}</p>
+<p>status: {{field1.status}}</p>
+<p>value: {{field1.value}}</p>

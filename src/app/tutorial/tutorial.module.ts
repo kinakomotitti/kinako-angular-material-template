@@ -8,7 +8,6 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { ReactiveHeroComponent } from './components/input-forms/reactive-hero/reactive-hero.component';
-import { ReactiveSampleComponent } from './components/input-forms/reactive-sample/reactive-sample.component';
 import { TemplateDrivenHeroComponent } from './components/input-forms/template-driven-hero/template-driven-hero.component';
 import { MessageComponent } from './components/message/message.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
@@ -27,7 +26,6 @@ import { TutorialRoutingModule } from './tutorial-routing.module';
     TemplateDrivenHeroComponent,
     ReactiveHeroComponent,
     InputFormsSampleComponent,
-    ReactiveSampleComponent,
   ],
   imports: [
     CommonModule,
