@@ -1,61 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-home-dashboard',
   templateUrl: './home-dashboard.component.html',
-  styleUrls: ['./home-dashboard.component.scss']
+  styleUrls: ['./home-dashboard.component.scss'],
 })
-export class HomeDashboardComponent implements OnInit {
-
-  options = [
-    {
-      display: 'One',
-      value: '1'
-    }, {
-      display: 'Two',
-      value: '2'
-    }, {
-      display: 'Three',
-      value: '3'
-    }, {
-      display: 'Four',
-      value: '4'
-    }, {
-      display: 'Five',
-      value: '5'
-    }, {
-      display: 'Six',
-      value: '6'
-    }, {
-      display: 'Six',
-      value: '7'
-    }
-    , {
-      display: 'Six',
-      value: '8'
-    }
-    , {
-      display: 'Six',
-      value: '9'
-    }, {
-      display: 'Six',
-      value: '10'
-    }
-  ];
+export class HomeDashboardComponent {
+  options: any = [];
 
   showError = false;
   errorMessage = '';
-  selected :string[]=[];
+  selected: string[] = [];
 
-  constructor() { 
+  constructor() {
+    for (let index = 0; index < 1000; index++) {
+      this.options.push({ display: index, value: index });
+    }
   }
 
-  ngOnInit(): void {
-  }
-
-  getSelectedOptions(selected:string[]) {
-    console.log("Home:"+selected);
+  getSelectedOptions(selected: string[]) {
+    console.log('Home:' + selected);
     this.selected = selected;
   }
-
 }

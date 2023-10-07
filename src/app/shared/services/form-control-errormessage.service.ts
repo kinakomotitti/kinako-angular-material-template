@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { AbstractControl } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FormControlErrormessageService {
-  public getErrorMessages(target: FormControl): string[] {
+  public getErrorMessages(target: AbstractControl): string[] {
     const message = [];
 
     if (target.hasError('required')) message.push('The value is required.');
@@ -26,6 +26,14 @@ export class FormControlErrormessageService {
       message.push(
         `${
           target.getError('asyncValidatorSample').expected
+        } is prohibited by Async Validator.`
+      );
+    }
+
+    if (target.hasError('CorrelationCheck')) {
+      message.push(
+        `${
+          target.getError('CorrelationCheck').expected
         } is prohibited by Async Validator.`
       );
     }

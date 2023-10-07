@@ -18,6 +18,7 @@
       {{ onDisplayString() }}
     </mat-select-trigger>
     <div class="box-search-contents">
+      <div *ngIf=""></div>
       <mat-option *ngFor="let option of options; trackBy: trackByFn" [disabled]="option.disabled"
         [value]="option[value]" [style.display]="hideOption(option) ? 'none' : 'flex'">{{ option[display] }}
       </mat-option>
